@@ -1,1 +1,3 @@
-# dungxibo123.github.io
+---
+permalink: /index.html
+---
