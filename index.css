@@ -1,0 +1,91 @@
+.nav {
+    background-color: rgb(59, 64, 60);
+    position: sticky fixed;
+    font-size: 30px;
+    padding-left: 7.5%;
+    color: white;
+    font-family: 'Langar',cursive;
+    padding-right: 7.5%;
+    height: 47px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+}
+
+.info-btns {
+    padding-bottom: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.banner {
+    height: 600px;
+    align-items: center;
+}
+
+.banner-info {
+    display: block;
+    text-align: center;
+    width: 100%;
+    
+}
+
+.banner-info #cover {
+    object-position: center;
+    object-fit: cover;
+    height: 600px;
+}
+
+.background {
+    z-index: -1;
+    opacity: 0.7;
+    position: absolute;
+}
+
+
+.foreground {
+    z-index: 1;
+    position: absolute;
+}
+
+.avatar {
+    align-items: center;
+    width: 100%;
+    height: inherit;
+}
+
+.box-row img{
+    border-radius: 50%;
+    height: 300px;
+    width: 300px;
+}
+
+.box-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: inherit;
+}
+
+.box-row p span{
+    padding-top: 10px;
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: center;
+}
+.box-row p {
+    text-align: center;
+}
+
+.about-me-main {
+    width: 100%;
+    height: 300px;
+    background-color: #1a1c1b;
+    color: lightgoldenrodyellow;
+}
+
+.header {
+    padding-top: 30px;
+}
