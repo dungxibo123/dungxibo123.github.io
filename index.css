@@ -24,9 +24,7 @@
     height: 600px;
     align-items: center;
 }
-.banner:hover {
-    animation: fadeIn 2s ease;
-}
+
 .banner:active {
     animation: bounce;
 }
@@ -95,3 +93,23 @@
 .header {
     padding-top: 30px;
 }
+
+
+.profile-link > a {
+    text-decoration: none;
+    padding: 5px 10px 5px 10px;
+    color: black;
+    font-size: 30px;
+}
+
+.profile-link {
+    width: 300px;
+    align-items: center;
+}
+
+#about-me-main .header > p > b {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 15;
+}
+
