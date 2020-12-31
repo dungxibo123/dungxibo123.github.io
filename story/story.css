@@ -1,0 +1,76 @@
+.nav-div {
+    background-color: rgb(59, 64, 60);
+    position: sticky;
+    font-size: 30px;
+    padding-left: 7.5%;
+    color: white;
+    font-family: 'Langar',cursive;
+    padding-right: 7.5%;
+    height: 47px;
+}
+
+.nav-div a {
+    text-decoration: none;
+    color: white;
+}
+
+.info-btns {
+    padding-bottom: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.bodies {
+    padding-top: 40px;
+}
+
+#stories {
+    background-color: white;
+    width:  70%;
+}
+
+
+.bodies {
+    padding-left: 7.5%;
+    padding-right: 7.5%;
+}
+.smaller-profile {
+    background-color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 25%;
+    height: 975px;
+}
+.smaller-profile-panel {
+    -webkit-box-shadow: 10px 11px 34px 9px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 11px 34px 9px rgba(0,0,0,0.75);
+    box-shadow: 10px 11px 34px 9px rgba(0,0,0,0.75);
+    border-radius: 3%;
+    -moz-border-radius: 3%;
+    -webkit-border-radius: 30px 30px 30px 30px;
+    border: 2px solid #ffffff;
+    padding: 20px 20px 20px 20px;
+    height: 600px;
+    
+}
+
+.link-to-another-site {
+    height: 300px;
+}
+
+.stories {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
+}
+
+.article-body {
+    -webkit-box-shadow: 10px 11px 34px 9px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 11px 34px 9px rgba(0,0,0,0.75);
+    box-shadow: 10px 11px 34px 9px rgba(0,0,0,0.75);
+    border-radius: 3%;
+    -moz-border-radius: 3%;
+    -webkit-border-radius: 30px 30px 30px 30px;
+    border: 2px solid #ffffff;
+    padding: 20px 20px 20px 20px;
+}
