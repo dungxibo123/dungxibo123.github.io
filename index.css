@@ -4,7 +4,7 @@
     font-size: 30px;
     padding-left: 7.5%;
     color: white;
-    font-family: 'Langar',cursive;
+    font-family: "Langar", cursive;
     padding-right: 7.5%;
     height: 47px;
 }
@@ -32,7 +32,6 @@
     display: block;
     text-align: center;
     width: 100%;
-    
 }
 
 .banner-info #cover {
@@ -47,7 +46,6 @@
     position: absolute;
 }
 
-
 .foreground {
     z-index: 1;
     position: absolute;
@@ -59,7 +57,7 @@
     height: inherit;
 }
 
-.box-row img{
+.box-row img {
     border-radius: 50%;
     height: 300px;
     width: 300px;
@@ -72,7 +70,7 @@
     height: inherit;
 }
 
-.box-row p span{
+.box-row p span {
     padding-top: 10px;
     font-size: 30px;
     font-weight: bolder;
@@ -94,7 +92,6 @@
     padding-top: 30px;
 }
 
-
 .profile-link > a {
     text-decoration: none;
     padding: 5px 10px 5px 10px;
@@ -112,4 +109,3 @@
     padding-bottom: 10px;
     font-size: 15;
 }
-

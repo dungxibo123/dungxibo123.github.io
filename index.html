@@ -1,99 +1,167 @@
 <html lang="en">
-<head>
+  <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <link rel="stylesheet" href="index.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Langar&display=swap" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Langar&display=swap"
+      rel="stylesheet"
+    />
     <!-- Font Awesome -->
     <link
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-    rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      rel="stylesheet"
     />
     <!-- Google Fonts -->
     <link
-    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-    rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      rel="stylesheet"
     />
 
-    <link href="https://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link
+      href="https://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css"
+      rel="stylesheet"
+    />
 
     <!-- MDB -->
     <link
-    href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.0.0/mdb.min.css"
-    rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.0.0/mdb.min.css"
+      rel="stylesheet"
     />
     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" media="screen" />
-    <script src="https://kit.fontawesome.com/4384b0e45a.js" crossorigin="anonymous"></script>
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      media="screen"
+    />
+    <script
+      src="https://kit.fontawesome.com/4384b0e45a.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Tien-Dung Vo</title>
-    </head>
-<body>
-    <nav class="d-flex flex-row align-items-xxl-center flex-fill nav-div ">
-        <div class="d-flex-lg-around home-page">
-            <a href="./">Vo Tien Dung</a>
+  </head>
+  <body>
+    <nav class="d-flex flex-row align-items-xxl-center flex-fill nav-div">
+      <div class="d-flex-lg-around home-page">
+        <a href="./">Vo Tien Dung</a>
+      </div>
+      <div
+        id="banner"
+        class="d-flex flex-row-reverse align-items-end flex-fill"
+        onclick="animate()"
+      >
+        <div class="info-btns">
+          <a class="btn btn-outline-light info-btn">CV</a>
         </div>
-        <div id="banner" class="d-flex flex-row-reverse align-items-end flex-fill" onclick="animate()">
-            <div class="info-btns">
-                <a class="btn btn-outline-light info-btn">CV</a>
-            </div>
-            <div class="info-btns">
-                <a class="btn btn-outline-light info-btn" href="#about-me-main">ABOUT</a>
-            </div>
-            <div class="info-btns">
-                <a class="btn btn-outline-light info-btn" href="story/story.html">STORIES</a>
-            </div>
-            
+        <div class="info-btns">
+          <a class="btn btn-outline-light info-btn" href="#about-me-main"
+            >ABOUT</a
+          >
         </div>
-        <!--div class="d-flex flex-fill padding-right-div" style="padding-right 30px; width: 30px;"></div -->
+        <div class="info-btns">
+          <a class="btn btn-outline-light info-btn" href="story/story.html"
+            >STORIES</a
+          >
+        </div>
+      </div>
+      <!--div class="d-flex flex-fill padding-right-div" style="padding-right 30px; width: 30px;"></div -->
     </nav>
     <div class="banner d-flex align-items-center animate__fadeInLeft">
-        <div class="d-flex flex-column banner-info align-item-center background">
-            <img id="cover" src="./resources/images/62232123_1227778764048960_2804279178004791296_o.jpg">
+      <div class="d-flex flex-column banner-info align-item-center background">
+        <img
+          id="cover"
+          src="./resources/images/62232123_1227778764048960_2804279178004791296_o.jpg"
+        />
+      </div>
+      <div class="d-flex avatar flex-column foreground">
+        <div class="d-flex foreground box-row flex-column align-items-center">
+          <div class="d-flex">
+            <img
+              src="./resources/images/69684299_1300229763470526_3760238859716132864_o.jpg"
+              alt=""
+            />
+          </div>
+
+          <div class="d-flex">
+            <p>
+              <span class="name">TIEN-DUNG VO</span><br />Machine Learning -
+              Deep Learning - Web
+            </p>
+          </div>
+          <div class="d-flex flex-row justify-content-center profile-link">
+            <a href="https://github.com/dungxibo123"
+              ><span class="fa fa-github"></span
+            ></a>
+            <a href="https://www.linkedin.com/in/votiendung/"
+              ><span class="fa fa-linkedin"></span
+            ></a>
+            <a href="https://www.facebook.com/votiendung.0805"
+              ><span class="fa fa-facebook"></span
+            ></a>
+          </div>
         </div>
-        <div class="d-flex avatar flex-column foreground">
-            <div class=" d-flex foreground box-row flex-column align-items-center">
-                <div class="d-flex">
-                    <img src="./resources/images/69684299_1300229763470526_3760238859716132864_o.jpg" alt=""></div>
-                <div class="d-flex">
-                    <p><span class="name">TIEN-DUNG VO</span><br>Machine Learning - Deep Learning - Web</p>
-                </div>
-                <div class="d-flex flex-row justify-content-center profile-link">
-                    <a href="https://github.com/dungxibo123"><span class="fa fa-github"></span></a>
-                    <a href="https://www.linkedin.com/in/votiendung/"><span class="fa fa-linkedin"></span></a>   
-                    <a href="https://www.facebook.com/votiendung.0805"><span class="fa fa-facebook"></span></a>
-                </div>
-                
-            </div>
-        </div>
+      </div>
     </div>
     <div class="about-me-main" id="about-me-main">
-        <div class="container header animate__animated animate__slideInLeft animate__delay-1s">
-            <h1><em><b>ABOUT ME</b></em></h1>
-            <p>
-               <b> <span class="fa fa-dot-circle-o"></span> A Informatic Student who loves mathematics, love doing scienctific research, but anyway he still have not had any chances yet, at least till now.</b><br>
-               <b> <span class="fa fa-dot-circle-o"></span> Enthusiastic in outdoor activities, strong soft-skills, very good communication skill.</b><br>
-               <b> <span class="fa fa-dot-circle-o"></span> Special and favorite ability is throwing cards, one is thrown card can be hurt other people</b><br>
-               <b> <span class="fa fa-dot-circle-o"></span> Love football but dont play well.</b>
-            </p>
-        </div>
+      <div
+        class="container header animate__animated animate__slideInLeft animate__delay-1s"
+      >
+        <h1>
+          <em><b>ABOUT ME</b></em>
+        </h1>
+        <p>
+          <b
+            ><span class="fa fa-dot-circle-o"></span> A Informatic Student who
+            loves mathematics, love doing scienctific research, but anyway he
+            still have not had any chances yet, at least till now.</b
+          ><br />
+          <b
+            ><span class="fa fa-dot-circle-o"></span> Enthusiastic in outdoor
+            activities, strong soft-skills, very good communication skill.</b
+          ><br />
+          <b
+            ><span class="fa fa-dot-circle-o"></span> Special and favorite
+            ability is throwing cards, one is thrown card can be hurt other
+            people</b
+          ><br />
+          <b
+            ><span class="fa fa-dot-circle-o"></span> Love football but dont
+            play well.</b
+          >
+        </p>
+      </div>
     </div>
-
+    <div class="about-me-main">
+      <div class="container header">
+        <h1>
+          <em><b>DUNG DEP TRAI</b></em>
+        </h1>
+      </div>
+    </div>
     <!-- JavaScript Bundle with Popper -->
     <!-- MDB -->
     <script
-    type="text/javascript"
-    src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.0.0/mdb.min.js"
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.0.0/mdb.min.js"
     ></script>
     <script type="text/javascript" src="./index.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

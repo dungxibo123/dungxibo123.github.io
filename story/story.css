@@ -22,6 +22,7 @@
 
 .bodies {
     padding-top: 40px;
+
 }
 
 #stories {
@@ -61,7 +62,7 @@
 .stories {
     padding-top: 20px;
     padding-bottom: 20px;
-    
+
 }
 
 .article-body {
@@ -73,6 +74,7 @@
     -webkit-border-radius: 30px 30px 30px 30px;
     border: 2px solid #ffffff;
     padding: 20px 20px 20px 20px;
+    min-width: 100%;
 }
 
 .link {
