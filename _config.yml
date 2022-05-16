@@ -1,34 +1,35 @@
 # site settings
-title: Forty
-subtitle: by HTML5 UP
-email: youremailaddress@gmail.com
-description: A responsive site template designed by HTML5 Up<br /> and released under the Creative Commons.
-baseurl: "/forty-jekyll-theme" # the subpath of your site, e.g. /blog
+title: Vo Tien Dung
+subtitle: AI Researcher
+email: votiendung0805@gmail.com
+description: Undergraduate Researcher in Ho Chi Minh University of Science | Research Intern at FPT Software <br>
+baseurl: "" # the subpath of your site, e.g. /blog
 url: # the base hostname & protocol for your site
-author:
-street_address: 1234 Somewhere Road
-city: Nashville
-state: TN
-zip_code: 55555
-country: United States of America
-phone: (716) 555-5555
+author: Tien Dung
+street_address: 85 So 1, Ward 10, Tan Binh District
+city: Ho Chi Minh City
+# state: TN
+zip_code: 700000
+country: Viet Nam
+phone: (84) 789 420 124
 
 # homepage tiles
 tiles-source: pages # accepts "posts" or "pages"
 tiles-count: 6
 
+formspree: mnqwlojl
 # social settings (key must match name of font awesome icon)
 # see https://fontawesome.com/icons?d=gallery&p=2&s=brands
 # Icons are not shown if value is empty
 # You need to restart jekyll for changes to have an effect
 socials:
-  GitHub: https://github.com/andrewbanchich
+  GitHub: https://github.com/dungxibo123
   GitLab:
-  Google-Plus: https://plus.google.com/u/0/+AndrewBanchich
-  Instagram:
-  LinkedIn: https://www.linkedin.com/in/andrew-banchich-a4ba1195
-  Twitter: https://twitter.com/andrewbanchich
-  Facebook:
+  Google-Plus:
+  Instagram: https://www.instagram.com/dungvt19/
+  LinkedIn: https://www.linkedin.com/in/votiendung
+  Twitter: https://twitter.com/dungxibo123
+  Facebook: https://www.facebook.com/dungtv.tv/
   Slack:
 
 # build settings
