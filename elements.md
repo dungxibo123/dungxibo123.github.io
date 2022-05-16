@@ -1,7 +1,8 @@
 ---
 layout: page
-title: Elements
+title: Story
 image: assets/images/pic01.jpg
+description: Life-style, life story
 nav-menu: true
 ---
 

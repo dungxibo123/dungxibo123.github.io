@@ -1,7 +1,7 @@
 ---
-title: Landing
+title: Reading
 layout: landing
-description: 'Lorem ipsum dolor sit amet nullam consequa<br />sed veroeros. tempus adipiscing nulla.'
+description: 'Summarize publications and books'
 image: assets/images/pic07.jpg
 nav-menu: true
 ---
