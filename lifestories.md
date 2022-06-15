@@ -1,8 +1,8 @@
 ---
-title: Reading
-layout: landing
-description: 'Summarize publications and books'
-image: assets/images/pic07.jpg
+title: Story
+layout: storiespage
+description: 'Life and journey stories'
+image: assets/images/landing.jpg
 nav-menu: true
 ---
 

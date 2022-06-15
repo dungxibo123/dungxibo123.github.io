@@ -1,9 +1,9 @@
 ---
 layout: page
-title: Story
+title: Element for design
 image: assets/images/pic01.jpg
-description: Life-style, life story
-nav-menu: true
+description: Back-bone for designing
+nav-menu: false
 ---
 
 <!-- Main -->

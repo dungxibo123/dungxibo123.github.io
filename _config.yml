@@ -32,6 +32,13 @@ socials:
   Facebook: https://www.facebook.com/dungtv.tv/
   Slack:
 
+collections:
+  stories:
+    output: true
+  publications:
+    output: true
+  posts:
+    output: true
 # build settings
 markdown: kramdown
 
