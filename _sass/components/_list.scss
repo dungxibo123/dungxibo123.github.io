@@ -146,3 +146,7 @@
 			margin-left: _size(element-margin);
 		}
 	}
+
+.post-preview::hover {
+  opacity: 90%; 
+}
