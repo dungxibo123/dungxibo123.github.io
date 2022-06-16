@@ -1,3 +1,15 @@
-.post-preview::hover {
-  opacity: 90%; 
+.post-preview {
+  //transition: color .5s, box-shadow .5s;  
+  &:hover {
+    //box-shadow: inset 1440.330px 0 0 0 #1363DF;
+    color: white;
+    text-decoration: underline;
+    em {
+      text-decoration: underline;
+    }
+    b {
+    
+      text-decoration: underline;
+    }
+  }
 }

@@ -25,7 +25,9 @@
 		{% if page.image %}<span class="image main"><img src="{{ site.baseurl }}/{{ page.image }}" alt="" /></span>{% endif %}
     <h2>Recent posts</h2>
     {% for post in site.stories %}
-    <article class="post-preview">
+
+    <article>
+    <div class="post-preview">
     <a href={{ post.url | relative_url }}>
       <h2 class="post-title" style="margin: 0px 0px 10px 0px !important; ">
       {{ post.title }}</h2>
@@ -42,7 +44,7 @@
     </b>
     on <b>{{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}</b>
     </p>
-
+    </div>
     </article>
     <hr>
     {% endfor %}
