@@ -33,7 +33,7 @@
       <h3 class="post-des" style="font-weight: 5; font-size: 25px; margin-bottom: 5px;">{{ post.description }}</h2>
     </a>
     <p class="post-meta">
-    Posted by
+		<i class="icon far fa-user"></i>
     <b>
     {% if post.author %}
     {{ post.author }}
@@ -41,7 +41,7 @@
     {{ site.author }}
     {% endif %}
     </b>
-    on <b>{{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}</b>
+    <i class="icon fa-calendar"></i> <b>{{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}</b>
     </p>
 		</div>
     </article>
