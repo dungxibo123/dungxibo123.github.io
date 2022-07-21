@@ -23,7 +23,7 @@ Bạn sẽ tìm thấy ở đây:
 
 ### Câu chuyện chính hôm nay mình muốn kể
 
-Mình cũng sắp onboard với công việc kỹ sư mới, nên mình muốn kể lại một tí những gì mình đã trải nghiệm ở công việc nghiên cứu. 
+Mình cũng sắp onboard với công việc kỹ sư mới, nên mình muốn kể lại một tí những gì mình đã trải nghiệm ở công việc nghiên cứu với mong muốn rằng lỡ sau này mình không có niềm tin vào việc nghiên cứu khoa học cơ bản nữa thì vẫn còn thứ gì đó để nhắc mình nhớ về một thời say đắm cùng những chiếc dòng toán trong những bài báo khó nhằn đến thế nào. Nhắc mình nhớ về những thứ thú vị mình tích lũy được trong quá trình cố gắng trở thành một nghiên cứu sinh thực thụ.
 
 **CẢNH BÁO:** Đây là một câu chuyện khá dài để kể lể nên nếu bạn không thích đọc dài dòng thì có thể bỏ qua ngay từ đây nha!
 
@@ -105,7 +105,7 @@ Quyết định này được mình cân nhắc sau một thời gian dài bị 
 
 (Thêm rất nhiều câu chuyện khác mà nội tình nó dài loằng ngoằng)
 
-Mình đã quyết định nghĩ việc nghiên cứu để chuyển qua làm kỹ sư một thời gian để xem mình có thực sự hợp với việc làm kỹ sư hay không, đồng thời làm đẹp hơn CV cũng như tích lũy kinh nghiệm máy học ở những lĩnh vực mình chưa từng chạm tay tới như NLP, SPD, CV,...
+Mình đã quyết định nghỉ việc nghiên cứu để chuyển qua làm kỹ sư một thời gian để xem mình có thực sự hợp với việc làm kỹ sư hay không, đồng thời làm đẹp hơn CV cũng như tích lũy kinh nghiệm máy học ở những lĩnh vực mình chưa từng chạm tay tới như NLP, SPD, CV,...
 
 
 
@@ -118,6 +118,7 @@ Các bạn muốn hỏi gì thì cứ điền vô cái footer ở dưới là đ
 
 
 Thân,
+
 Dũng
 
 
