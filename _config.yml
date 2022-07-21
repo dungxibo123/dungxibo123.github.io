@@ -2,7 +2,7 @@
 title: Vo Tien Dung
 subtitle: AI Researcher
 email: votiendung0805@gmail.com
-description: Undergraduate Researcher in Ho Chi Minh University of Science | Research Intern at FPT Software <br>
+description: Undergraduate Researcher @ Ho Chi Minh University of Science | Machine Learning Engineer @ Moreh <br>
 baseurl: "" # the subpath of your site, e.g. /blog
 url: # the base hostname & protocol for your site
 author: Tien Dung
@@ -24,7 +24,7 @@ formspree: mnqwlojl
 # You need to restart jekyll for changes to have an effect
 socials:
   GitHub: https://github.com/dungxibo123
-  GitLab:
+  GitLab: https://gitlab.com/dungxibo123
   Google-Plus:
   Instagram: https://www.instagram.com/dungvt19/
   LinkedIn: https://www.linkedin.com/in/votiendung
