@@ -6,82 +6,16 @@ image: assets/images/landing.jpg
 nav-menu: true
 ---
 
-<!-- Main -->
-<div id="main">
 
-<!-- One -->
-<section id="one">
-	<div class="inner">
-		<header class="major">
-			<h2>Sed amet aliquam</h2>
-		</header>
-		<p>Day la mot cai ly do gi do co ly Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna.</p>
-	</div>
-</section>
+Sài Gòn quanh năm tấp nập, bộn bề, cuộc sống năng động lan tràn thậm đến từng chiếc hẻm nhỏ. Trời Sài Gòn dù nắng, dù mưa, vẫn không thể nào che khuất đi được những khuôn mặt vội vàng, lo toang thoắt ẩn, thoắt hiện trên những gò má cao, gầy của người dân Sài Thành. Sài Gòn vẫn thế, vẫn luôn là một thành phố trẻ trung, năng động, một trung tâm kinh tế sầm uất, một nơi hoa lệ. Đa phần dân cư Sài Gòn sống hiện đại, tác phong nhanh nhẹn, nhưng trong Sài Gòn có vẻ to lớn đó lại tồn tại một cậu nhóc chỉ hơn hai mươi, có lối sống rất cổ điển, giản dị, nhẹ nhàng, chậm rãi. Cậu ấy có một sở thích rất lạ là rong ruổi khắp những tuyến đường Sài Gòn, nghe những bài nhạc cuả Đen Vâu và nói chuyện với những người mà cậu ấy gặp gỡ. Một cuộc gặp vô tình, một cách nói chuyện thoải mái, một cách lắng nghe đầy trân trọng,hy vọng rằng họ sẽ cảm thấy có một ngày không tệ. 
 
-<!-- Two -->
-<section id="two" class="spotlights">
-	<section>
-		<a href="generic.html" class="image">
-			<img src="{% link assets/images/pic08.jpg %}" alt="" data-position="center center" />
-		</a>
-		<div class="content">
-			<div class="inner">
-				<header class="major">
-					<h3>Orci maecenas</h3>
-				</header>
-				<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>
-				<ul class="actions">
-					<li><a href="generic.html" class="button">Learn more</a></li>
-				</ul>
-			</div>
-		</div>
-	</section>
-	<section>
-		<a href="generic.html" class="image">
-			<img src="{% link assets/images/pic09.jpg %}" alt="" data-position="top center" />
-		</a>
-		<div class="content">
-			<div class="inner">
-				<header class="major">
-					<h3>Rhoncus magna</h3>
-				</header>
-				<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>
-				<ul class="actions">
-					<li><a href="generic.html" class="button">Learn more</a></li>
-				</ul>
-			</div>
-		</div>
-	</section>
-	<section>
-		<a href="generic.html" class="image">
-			<img src="{% link assets/images/pic10.jpg %}" alt="" data-position="25% 25%" />
-		</a>
-		<div class="content">
-			<div class="inner">
-				<header class="major">
-					<h3>Sed nunc ligula</h3>
-				</header>
-				<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>
-				<ul class="actions">
-					<li><a href="generic.html" class="button">Learn more</a></li>
-				</ul>
-			</div>
-		</div>
-	</section>
-</section>
+Và đây là blog của cậu ấy
 
-<!-- Three -->
-<section id="three">
-	<div class="inner">
-		<header class="major">
-			<h2>Massa libero</h2>
-		</header>
-		<p>This is the Three content lorem conasdfkjad;lfkajdfo;auodfiuwaeofakj;fawfyawiufyagawlkfjwaefauwoiefuawifoueawofiuawopfeiuawfeuawpfuawpifuawofpuawefuawopfuawpfuawpfuawfuawoifuawofuaweiofuawefawopifuawfiawopuf</p>
-		<ul class="actions">
-			<li><a href="generic.html" class="button next">Get Started</a></li>
-		</ul>
-	</div>
-</section>
+---
+ 
+Chào cậu,
 
-</div>
+Tớ không biết từ đâu mà cậu tìm đến được với những dòng này, tớ cũng không biết được cậu là ai, cậu là một con người như thế nào, tụi mình có quen nhau không, nhưng mà tớ hy vọng rằng những câu chuyện tớ viết ra sẽ khiến cậu ấm lòng, vững tin vào cụôc sống hơn.
+
+
+

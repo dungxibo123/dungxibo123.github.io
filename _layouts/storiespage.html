@@ -23,7 +23,9 @@
 			<h1>{{ page.title }}</h1>
 		</header>
 		{% if page.image %}<span class="image main"><img src="{{ site.baseurl }}/{{ page.image }}" alt="" /></span>{% endif %}
+		<div>{{ content }}</div>
     <h2>Recent posts</h2>
+
     {% for post in site.stories %}
 
     <article>

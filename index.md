@@ -14,3 +14,6 @@ Currently, I am open to working in the Computer Science field. I appreciate any 
 This is my blog, which will contain my life stories, my journeys, some of what I am reading about, and some courses that you need to worries when you want to learn about Machine Learning and Artificial Intelligence
 
 Feel free to contact me if you have any trouble in your life or when you need someone to listen to you or you need an advice in your own path, I am right here and always be your fully support package.
+
+
+
