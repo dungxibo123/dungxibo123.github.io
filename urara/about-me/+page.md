@@ -23,6 +23,7 @@ I love doing cool things such as:
 - [x] Mathematics
 - [x] Playing football (soccer - actually, I have not played for a while, since came to Singapore)
 - [x] Little bit online games
+- [x] Engineering
 
 # About the blog
 
