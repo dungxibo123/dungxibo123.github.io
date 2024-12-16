@@ -22,11 +22,11 @@ export const site: SiteConfig = {
 			},
 		]
   },
-  description: 'Powered by SvelteKit/Urara',
+  description: 'A personal blog just for fun',
   domain: import.meta.env.URARA_SITE_DOMAIN ?? 'urara-demo.netlify.app',
   lang: 'en-US',
   protocol: import.meta.env.URARA_SITE_PROTOCOL ?? import.meta.env.DEV ? 'http://' : 'https://',
-  subtitle: 'Sweet & Powerful SvelteKit Blog Template',
+  subtitle: 'Blog',
   themeColor: '#3D4451',
-  title: 'Dung Vo',
+  title: '~/dungvo.sh',
 }

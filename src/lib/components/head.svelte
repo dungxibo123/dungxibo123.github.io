@@ -10,8 +10,8 @@
 
 <svelte:head>
   <meta content={site.author?.name} name='author' />
-  {#if post}
-    
+  <link rel="stylesheet" href="/assets/css/typing.css">
+  {#if post}   
 	  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET" crossorigin="anonymous">
     <link href={site.protocol + site.domain + post.path} rel='canonical' />
     {#if post.type === 'article'}
