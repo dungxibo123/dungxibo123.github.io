@@ -1,6 +1,6 @@
 {
   "background_color": "#3D4451",
-  "description": "Powered by SvelteKit/Urara",
+  "description": "A personal blog just for fun",
   "display": "standalone",
   "icons": [
     {
@@ -30,10 +30,10 @@
   ],
   "id": "https://urara-demo.netlify.app/",
   "lang": "en-US",
-  "name": "Dung Vo",
+  "name": "~/dungvo.sh",
   "orientation": "portrait",
   "scope": "/",
-  "short_name": "Dung Vo",
+  "short_name": "~/dungvo.sh",
   "start_url": "/",
   "theme_color": "#3D4451"
 }
