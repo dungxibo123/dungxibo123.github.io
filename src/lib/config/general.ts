@@ -43,6 +43,10 @@ export const header: HeaderConfig = {
       link: '/about-me',
       text: 'About'
     },
+    {
+      link: '/publications',
+      text: 'Publications'
+    },
   ],
   search: {
     colors: true,
