@@ -8,7 +8,7 @@ created: 05-08-2001
 
 My name is **Vo Tien Dung**
 
-Yes, you did not get it wrong, my name is "Dung". In Vietnamese, "Dung" stands for courage, brave. You can spell my name exactly life "Dzung", for the fellows who know Chinese or is a Chinese, my name is also pronounce exactly like "brave" in Chinese (from my labmate).
+Yes, you did not get it wrong, my name is "Dung". In Vietnamese, "Dung" stands for courage, brave. You can spell my name exactly like "Dzung", for the fellows who know Chinese or is a Chinese, my name is also pronounce exactly like "brave" in Chinese (from my labmate).
 
 Currently, I am working as a Research Engineer at Singapore Management University with the focus on Multi-agent conversational systems. Previously, I am a data scientist at Be Group JSC - a ride-hailing company like Grab or Uber but in a smaller scale. Before joining Be Group, I am a Machine Learning Engineer at Moreh. My first ever job is doing academic research at FPT Software AI Residency with the focus on Neural Differential Equations and a little bit about Graph.
 
