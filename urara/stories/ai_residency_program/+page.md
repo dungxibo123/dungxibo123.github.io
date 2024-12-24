@@ -1,6 +1,5 @@
 ---
 title:  Một năm làm việc tại FPT Software đã đem lại cho mình điều gì?
-image: null
 created: 2022-07-20
 ---
 
