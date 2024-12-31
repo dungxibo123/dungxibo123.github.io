@@ -41,10 +41,6 @@ Sau đó mình tiếp tục kiếm giáo viên và được sự liên hệ ph�
 
 ![PhD fail number 3](/assets/phdfailed.png)
 
-## Những bài học rút ra
-
-- [x] Cứ nộp hết các nơi, đừng tự tin hay tin tưởng bất kỳ ai và nơi nào hết. Đừng có dồn sức vào một nơi như mình mà hãy dồn sức vào cái profile cho đẹp rồi đem apply nhiều nơi
-- [x] Hãy suy nghĩ kỹ về quyết định đi tìm và học Ph.D., nó rất khó khăn và mệt mỏi
 
 ## Cơ duyên và định hình lại giá trị bản thân
 
