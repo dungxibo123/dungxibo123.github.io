@@ -1,5 +1,5 @@
 ---
-title: Bi level Optimization - Example, Basics, SGD solver and analysis
+title: Bi level Optimization - Part 1 - Example and Basics
 created: 2025-01-09
 tags: ['machine learning', 'optimization']
 ---
