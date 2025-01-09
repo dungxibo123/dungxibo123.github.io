@@ -23,7 +23,7 @@ export const site: SiteConfig = {
 		]
   },
   description: 'A personal blog just for fun',
-  domain: import.meta.env.URARA_SITE_DOMAIN ?? 'urara-demo.netlify.app',
+  domain: import.meta.env.URARA_SITE_DOMAIN ?? 'dungxibo123.github.io',
   lang: 'en-US',
   protocol: import.meta.env.URARA_SITE_PROTOCOL ?? import.meta.env.DEV ? 'http://' : 'https://',
   subtitle: 'Blog',
