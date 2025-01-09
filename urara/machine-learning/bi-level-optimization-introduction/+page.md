@@ -126,7 +126,7 @@ Let $(2.5)$ to $(2.2)$ we have a final solution here
 
 
 $$
-\nabla F(x) = \nabla_x {f(x, y^*(x))} +  \color{green}{- \nabla_{xy} g(x, y^*(x)) \quad  [\nabla_{yy}g(x, y^*(x))] ^{-1}} \color{red} \nabla_y {f(x, y^*(x))} \tag{2.2}
+\nabla F(x) = \nabla_x {f(x, y^*(x))} +  \color{green}{- \nabla_{xy} g(x, y^*(x)) \quad  [\nabla_{yy}g(x, y^*(x))] ^{-1}} \nabla_y {f(x, y^*(x))} \tag{2.2}
 $$
 
 
