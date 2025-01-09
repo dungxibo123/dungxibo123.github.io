@@ -57,7 +57,7 @@ vậy $(x^*, y^*) = (7, 3.5)$ là nghiệm tối ưu của bài toán trên.
 ### General Bi-level Optimization Problems
 
 
-Given $f,g: \mathcal{D} \subset \mathbb{R}^d\times\mathbb{R}^d \rightarrow \mathbb{R}$ is two function parameterized by $\theta, \omega$, respectively. Find $(x^*,y^*_{\text{opt}})$ satisfied the unconstraint optimization problems below:
+Given $f,g: \mathcal{D} \subset \mathbb{R}^d\times\mathbb{R}^d \rightarrow \mathbb{R}$ is two function. Find $(x^*,y^*_{\text{opt}})$ satisfied the unconstraint optimization problems below:
 
 $$
 \begin{align}
