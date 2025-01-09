@@ -8,9 +8,9 @@ import rehypeExternalLinks from 'rehype-external-links'
 import rehypeSlug from 'rehype-slug'
 import remarkFFF from 'remark-fff'
 import math from 'remark-math';
-import rehypeKatexSvelte from 'rehype-katex-svelte';
-// import rehype_katex from 'rehype-katex';
-//import rehypeKatexSvelte from "rehype-katex-svelte";
+// import rehypeKatexSvelte from 'rehype-katex-svelte';
+import rehype_katex from 'rehype-katex';
+import rehypeKatexSvelte from "rehype-katex-svelte";
 import katex from 'katex';
 import remarkFootnotes from 'remark-footnotes'
 import { createShikiHighlighter, renderCodeToHTML, runTwoSlash } from 'shiki-twoslash'
@@ -119,6 +119,7 @@ export default {
   
   rehypePlugins: [
 		// correct_hast_tree, rehype_katex,
+    [rehypeKatexSvelte, {output: 'html', throwOnError: true, colorIsTextColor: true, strict: "warn"}],
     rehypeSlug,
     [rehypeAutolinkHeadings, { behavior: 'wrap' }],
     [
@@ -128,7 +129,6 @@ export default {
         target: '_blank',
       },
     ],
-    [rehypeKatexSvelte, {output: 'mathml'}],
   ],
   remarkPlugins: [
 		math, //, katex_blocks,

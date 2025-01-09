@@ -7,7 +7,7 @@ tags: ['machine learning', 'optimization']
 
 ### 1. Mô tả
 
-Cho một hàm $f, g: \mathbb{R}^n \times \mathbb{R}^n \rightarrow \mathbb{R}$ parameterized by $\theta_{f}, \theta_{g}$. Chúng ta có thể viết dưới dạng sau. $f(x,y; \theta_{f})$ và $g(x, y; \theta_{g})$
+Cho một hàm $f, g: \Bbb{R}^n \times \Bbb{R}^n \rightarrow \Bbb{R}$ parameterized by $\theta_{f}, \theta_{g}$. Chúng ta có thể viết dưới dạng sau. $f(x,y; \theta_{f})$ và $g(x, y; \theta_{g})$
 
 Bài toán tối ưu hai cấp được định nghĩa như sau. Ta tìm $x^*$ thoả mãn
 
@@ -22,7 +22,7 @@ y^* =\text{argmin} \quad g(x^*, y)
 $$
 
 ### 2.  Ví dụ
-Cho hai hàm $f, g: \mathbb{R} \times \mathbb{R} \rightarrow \mathbb{R}$ như sau. Tìm $(x^*, y^*)$ thoả mãn điều kiện trên
+Cho hai hàm $f, g: \Bbb{R} \times \Bbb{R} \rightarrow \Bbb{R}$ như sau. Tìm $(x^*, y^*)$ thoả mãn điều kiện trên
 
 $$ \left\{\begin{matrix}
 f(x, y) = 7x^2. - 12xy +4y^2 -30x + 4y - 2 \\
@@ -31,7 +31,7 @@ g(x, y) = 4y^2 - 4xy + x^2 + 17
 $$
 <b><ins>Giải:</ins></b>
 
-Ta tìm $y^*$ trước, cho đạo hàm $\nabla g = 0$. Với mọi $x \in \mathbb{R}$, ta có
+Ta tìm $y^*$ trước, cho đạo hàm $\nabla g = 0$. Với mọi $x \in \Bbb{R}$, ta có
 
 $$
 \begin{aligned}
@@ -39,7 +39,7 @@ $$
 \implies \quad y^* = \frac{x}{2}
 \end{aligned}
 $$
-Điều này tức là giá trị của $g(x,y)$ cực tiểu khi $y^* = y = \frac{x}{2}$ với mọi $x \in \mathbb{R}$. Thế điều này vào phương trình đầu ta có
+Điều này tức là giá trị của $g(x,y)$ cực tiểu khi $y^* = y = \frac{x}{2}$ với mọi $x \in \Bbb{R}$. Thế điều này vào phương trình đầu ta có
 
 $$
 f(x, y^*) = 2x^2 - 28x - 2 
@@ -57,7 +57,7 @@ vậy $(x^*, y^*) = (7, 3.5)$ là nghiệm tối ưu của bài toán trên.
 ### General Bi-level Optimization Problems
 
 
-Given $f,g: \mathcal{D} \subset \mathbb{R}^d\times\mathbb{R}^d \rightarrow \mathbb{R}$ is two function. Find $(x^*,y^*_{\text{opt}})$ satisfied the unconstraint optimization problems below:
+Given $f,g: \mathcal{D} \subset \Bbb{R}^d\times\Bbb{R}^d \rightarrow \Bbb{R}$ is two function. Find $(x^*,y^*_{\text{opt}})$ satisfied the unconstraint optimization problems below:
 
 $$
 \begin{align}
@@ -99,7 +99,7 @@ As usual when solving a single-level optimization problem on $f$, we also try to
 
 <details><summary>Total derivatives of nested functions</summary>
 
-Given $y: \mathbb{R^n} \rightarrow \mathbb{R^m}$ and $f: \mathbb{R}^n \times \mathbb{R}^m \rightarrow \mathbb{R}$. We have
+Given $y: \Bbb{R^n} \rightarrow \Bbb{R^m}$ and $f: \Bbb{R}^n \times \Bbb{R}^m \rightarrow \Bbb{R}$. We have
 
 $$
 \frac{df(x, y(x))}{dx} = \frac{df(x,y)}{dx} + \frac{dy}{dx} \frac{df(x,y)}{dy} \tag {2.1}
@@ -146,9 +146,9 @@ So we introduce a new term called **Stochastic derivatives**, a assumption for t
 **Assumption on stochastic derivatives:**  Gradient of $f(\cdot, \cdot; \xi)$ and $g(\cdot, \cdot; \phi)$ and hessian $\nabla^2 g$ respectively are unbiased estimator of $\nabla f$ and $\nabla g$  and $\nabla^2 g$ where $\xi, \phi$ are drawn from a their distribution.  Which mean for any fixed $x,y$
 $$
 \begin{align}
-\mathbb{E}_{\xi}[\nabla f(\cdot, \cdot; \xi)] = \nabla f(\cdot, \cdot)\\
-\mathbb{E}_{\phi}[\nabla g(\cdot, \cdot; \phi)] = \nabla g(\cdot, \cdot)\\
-\mathbb{E}_{\phi}[\nabla^2 g(\cdot, \cdot; \phi)] = \nabla^2 g(\cdot, \cdot) \tag{2.3}
+\Bbb{E}_{\xi}[\nabla f(\cdot, \cdot; \xi)] = \nabla f(\cdot, \cdot)\\
+\Bbb{E}_{\phi}[\nabla g(\cdot, \cdot; \phi)] = \nabla g(\cdot, \cdot)\\
+\Bbb{E}_{\phi}[\nabla^2 g(\cdot, \cdot; \phi)] = \nabla^2 g(\cdot, \cdot) \tag{2.3}
 \end{align}
 $$
 
@@ -219,10 +219,10 @@ So will call the **convergence rate** of the algorithm is $\color{green} O(\sigm
 Due to our assumption do not mention about convexity, we will analyze the "converge to zero rate" term of **average expectation of norms** of gradient matrix. Which mean
 
 $$
-\frac{1}{K}\sum_{k=1}^K \mathbb{E}\left[\left\Vert \nabla F(x^k) \right\Vert^2 \right]
+\frac{1}{K}\sum_{k=1}^K \Bbb{E}\left[\left\Vert \nabla F(x^k) \right\Vert^2 \right]
 $$
 
 We analyze this term because this will show how fastly $\color{red} x$ converge to the solution (because at the solution, the norm will be zero and the expectations of norm will be expected to be near $0$.
 
-As also, due to this is bi-level optimization, we also have to find out the convergence rate of the solution of $y$ defined by $\mathbb{E} \left[ \left\Vert y^K - y^*(x^K) \right\Vert^2\right]$. This is because the $y$ is strictly convex, so we can analyze the term following the convex rules. However, this is a "stochastic problem" so we better to analyze the "expectation" of the convergence.
+As also, due to this is bi-level optimization, we also have to find out the convergence rate of the solution of $y$ defined by $\Bbb{E} \left[ \left\Vert y^K - y^*(x^K) \right\Vert^2\right]$. This is because the $y$ is strictly convex, so we can analyze the term following the convex rules. However, this is a "stochastic problem" so we better to analyze the "expectation" of the convergence.
 
