@@ -7,47 +7,47 @@
     xmlns:image="https://www.google.com/schemas/sitemap-image/1.1"
     xmlns:video="https://www.google.com/schemas/sitemap-video/1.1">
     <url>
-      <loc>https://urara-demo.netlify.app</loc>
+      <loc>https://dungxibo123.github.io</loc>
     </url>
     
         <url>
-            <loc>https://urara-demo.netlify.app/machine-learning/bi-level-optimization-introduction</loc>
-            <lastmod>2025-01-09T11:26:29.215Z</lastmod>
+            <loc>https://dungxibo123.github.io/machine-learning/bi-level-optimization-introduction</loc>
+            <lastmod>2025-01-09T13:09:00.204Z</lastmod>
             <priority>0.5</priority>
         </url>
         <url>
-            <loc>https://urara-demo.netlify.app/stories/just_24</loc>
-            <lastmod>2025-01-09T11:26:29.216Z</lastmod>
+            <loc>https://dungxibo123.github.io/stories/just_24</loc>
+            <lastmod>2025-01-09T13:09:00.205Z</lastmod>
             <priority>0.5</priority>
         </url>
         <url>
-            <loc>https://urara-demo.netlify.app/mathematics/optimization</loc>
-            <lastmod>2025-01-09T11:26:29.216Z</lastmod>
+            <loc>https://dungxibo123.github.io/mathematics/optimization</loc>
+            <lastmod>2025-01-09T13:09:00.205Z</lastmod>
             <priority>0.5</priority>
         </url>
         <url>
-            <loc>https://urara-demo.netlify.app/machine-learning/linear_regression_with_statistical_view</loc>
-            <lastmod>2025-01-09T11:26:29.215Z</lastmod>
+            <loc>https://dungxibo123.github.io/machine-learning/linear_regression_with_statistical_view</loc>
+            <lastmod>2025-01-09T13:09:00.204Z</lastmod>
             <priority>0.5</priority>
         </url>
         <url>
-            <loc>https://urara-demo.netlify.app/stories/ai_residency_program</loc>
-            <lastmod>2025-01-09T11:26:29.216Z</lastmod>
+            <loc>https://dungxibo123.github.io/stories/ai_residency_program</loc>
+            <lastmod>2025-01-09T13:09:00.205Z</lastmod>
             <priority>0.5</priority>
         </url>
         <url>
-            <loc>https://urara-demo.netlify.app/machine-learning</loc>
-            <lastmod>2025-01-09T11:26:29.215Z</lastmod>
+            <loc>https://dungxibo123.github.io/machine-learning</loc>
+            <lastmod>2025-01-09T13:09:00.204Z</lastmod>
             <priority>0.5</priority>
         </url>
         <url>
-            <loc>https://urara-demo.netlify.app/mathematics</loc>
-            <lastmod>2025-01-09T11:26:29.215Z</lastmod>
+            <loc>https://dungxibo123.github.io/mathematics</loc>
+            <lastmod>2025-01-09T13:09:00.204Z</lastmod>
             <priority>0.5</priority>
         </url>
         <url>
-            <loc>https://urara-demo.netlify.app/about-me</loc>
-            <lastmod>2025-01-09T11:26:29.209Z</lastmod>
+            <loc>https://dungxibo123.github.io/about-me</loc>
+            <lastmod>2025-01-09T13:09:00.197Z</lastmod>
             <priority>0.5</priority>
         </url>
   </urlset>
