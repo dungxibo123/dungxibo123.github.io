@@ -78,8 +78,7 @@ We will have some assumptions for the exists of solution of the problem defined 
 We will assume that $f, \nabla f, \nabla g, \nabla^2 g$ are respectively $\ell_{f, 0}, \ell_{f, 1}, \ell_{g, 1}, \ell_{g, 2}$ - Lipschitz continuous with the input variable $\forall_{(x_1, y_1)} \in \mathcal{D}$     
 
 
-**Note:** This is for the existing of the closed-form solution with respect to $f, g, \nabla f, \nabla g, \nabla^2 g$
-
+**Note:** This is for the analysis of non-convex, this assumptions usually used in both convex and non-convex analysis
 
 ###### Assumption 2: Strong convexity of $g$ in $y$
 
