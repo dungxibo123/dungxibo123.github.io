@@ -10,7 +10,7 @@
 {#if typeof pub.title !== "undefined"}
 <a
   id={pub.id}
-  class="card mx-auto max-w-4xl bg-base-100 shadow-xl transition-shadow mb-7 h-card u-url hover:shadow-2xl">
+  class="card mx-auto max-w-4xl bg-base-100 shadow-xl transition-shadow mb-7 h-card u-url hover:shadow-2xl hover:scale-105 group">
   {#if pub.pubUrl}href={pub.pubUrl}{/if}
   <div class="card-body p-4">
       <div class="flex flex-col md:flex-row items-start gap-4">
@@ -20,7 +20,9 @@
         <div class="card-title flex-1 flex-col items-start gap-4">
 
         <div>
-            <h2 class="p-name text-left text-2xl mb-2">{pub.title}</h2>
+            <h2 class="p-name text-left text-2xl mb-2 group-hover:w-full">{pub.title}
+            <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-sky-600"></span>
+            </h2>
             <div class="mb-3 text-base font-normal">
               {#if authors}
               {#each authors as auth}

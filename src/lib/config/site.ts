@@ -3,7 +3,7 @@ import type { SiteConfig } from '$lib/types/site'
 export const site: SiteConfig = {
   author: {
     avatar: '/assets/site_avatar.jpeg',
-    bio: 'Research Engineer @ Singapore Management University',
+    bio: 'Ex Research Engineer @ SMU <br/> Ex-Data Scientist @ Be Group <br/>',
     name: 'Vo Tien Dung',
     status: '📦',
 		metadata: [
@@ -28,5 +28,5 @@ export const site: SiteConfig = {
   protocol: import.meta.env.URARA_SITE_PROTOCOL ?? import.meta.env.DEV ? 'http://' : 'https://',
   subtitle: 'Blog',
   themeColor: '#3D4451',
-  title: '~/dungvo.sh',
+  title: 'Vo Tien Dung |',
 }
