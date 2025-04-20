@@ -16,28 +16,53 @@
   export let data: LayoutData
 
   let { path, res } = data
+  
+  // Preloading variables
+  let isLoading = true
+  let hasVisited = false
 
   $: if (data)
     path = data.path
 
   posts.set(res)
   tags.set(genTags(res))
-  onMount(
-    () =>
-      !dev
-        && browser
+  onMount(() => {
+    // Check if first time visit
+    if (browser) {
+      hasVisited = localStorage.getItem('hasVisited') === 'true'
+      
+      if (!hasVisited) {
+        // First time visit - show loader for 2 seconds
+        setTimeout(() => {
+          isLoading = false
+          localStorage.setItem('hasVisited', 'true')
+        }, 2000)
+      } else {
+        // Already visited - skip loader
+        isLoading = false
+      }
+    }
+    
+    !dev
+      && browser
       && registerSW({
-          immediate: true,
-          onRegistered: r => r && setInterval(async () => await r.update(), 198964),
-          onRegisterError: error => console.error(error),
-        }),
-  )
+        immediate: true,
+        onRegistered: r => r && setInterval(async () => await r.update(), 198964),
+        onRegisterError: error => console.error(error),
+      })
+  })
 </script>
 
 <Head />
 
-<Header {path} />
+{#if isLoading && !hasVisited}
+  <div class="fixed inset-0 flex items-center justify-center bg-base-100 z-50">
+    <div class="animate-spin rounded-full h-32 w-32 border-b-4 border-primary"></div>
+  </div>
+{:else}
+  <Header {path} />
 
-<Transition {path}>
-  <slot />
-</Transition>
+  <Transition {path}>
+    <slot />
+  </Transition>
+{/if}

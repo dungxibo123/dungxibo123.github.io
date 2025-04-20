@@ -15,6 +15,8 @@ export type Publication = {
     conference?: string,
     tags?: string[]
     description?: string,
+    cate?: string,
+    conf?: string | null
 }
 
 

@@ -1,4 +1,3 @@
-
 import type { Publication } from '$lib/types/publication'
 
 
@@ -8,6 +7,8 @@ export const publications: Publication[] = [
     title: "Colloquial Singaporean English Style Transfer with Fine-Grained Explainable Control",
     tags: ["Multi-agent systems", "Large language models", "Prompting"],
     img: "/assets/stylecontrol.png",
+    cate: "Preprint",
+    conf: null,
     authors: [
       {
         name: "Liang Jinggui",
@@ -36,8 +37,10 @@ export const publications: Publication[] = [
   {
     id: "intellect",
     title: "IntellectNavigator: Enhancing Search Tools with LLMs-Powered Query Instruction",
-    tags: ["Embedding space mapping", "NLP"],
+    tags: ["Workshop", "Idea paper"],
     img: "/assets/intellect.png",
+    cate: "Workshop",
+    conf: 'WWW 2024',
     authors: [
       {
         name: "Dung Vo",
@@ -48,8 +51,10 @@ export const publications: Publication[] = [
   {
     id: "vivqa",
 		title: "From Vietnamese to English: Advancing VQA with Cross-Linguistic Mapping",
-    tags: ["Workshop", "Idea paper"],
+    tags: ["Embedding space mapping", "NLP"],
     img: "/assets/vivqa.png",
+    cate: "Workshop",
+    conf: "SCIDOCA 2024",
     authors: [
       {
         name: "Dung Vo",
@@ -67,9 +72,11 @@ export const publications: Publication[] = [
   },
   {
     id: "convsint",
-		title: "ConvINT: A Semi-Structured Intention Framework for Conversational Understanding",
+		title: "IntentionFrame: A Semi-Structured Framework for Fine-Grained Conversational Intention Understanding",
     tags: ["Data", "Semi-supervised learning"],
     img: "/assets/convsint.png",
+    cate: "Preprint",
+    conf: null,
     authors: [
       {
         name: "Liang Jinggui",

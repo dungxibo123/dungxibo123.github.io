@@ -3,7 +3,7 @@ import type { SiteConfig } from '$lib/types/site'
 export const site: SiteConfig = {
   author: {
     avatar: '/assets/site_avatar.jpeg',
-    bio: 'Ex Research Engineer @ SMU <br/> Ex-Data Scientist @ Be Group <br/>',
+    bio: 'PhD Student @ Wayne <br/> Ex Research Engineer @ SMU <br/> Ex-Data Scientist @ Be Group <br/>',
     name: 'Vo Tien Dung',
     status: '📦',
 		metadata: [
