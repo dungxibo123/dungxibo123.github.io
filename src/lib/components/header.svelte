@@ -5,6 +5,7 @@
   import { header as headerConfig, theme } from '$lib/config/general'
   import { site } from '$lib/config/site'
   import { title as storedTitle } from '$lib/stores/title'
+  import { settings } from '$lib/stores/settings'
   import { hslToHex } from '$lib/utils/color'
   import { fly } from 'svelte/transition'
 
@@ -67,6 +68,14 @@
         <a class='btn btn-ghost normal-case text-lg' href='/'><h1 class="animate-typing overflow-hidden whitespace-nowrap">{site.title}</h1></a>
       </div>
       <div class='navbar-end'>
+        <button 
+          aria-label={$settings.musicEnabled ? 'turn off music' : 'turn on music'} 
+          class='btn btn-square btn-ghost' 
+          on:click={() => settings.toggleMusic()} 
+          tabindex='0'>
+          <span class={$settings.musicEnabled ? 'i-heroicons-outline-volume-up' : 'i-heroicons-outline-volume-off'} />
+        </button>
+        
         {#if headerConfig.search}
           <button aria-label='search' class='btn btn-square btn-ghost' on:click={() => (search = !search)} tabindex='0'>
             <span class='i-heroicons-outline-search' />

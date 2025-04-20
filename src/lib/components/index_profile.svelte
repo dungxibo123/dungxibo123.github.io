@@ -1,5 +1,6 @@
 <script lang='ts'>
   import { site } from '$lib/config/site'
+  import MusicTrackDisplay from '$lib/components/MusicTrackDisplay.svelte'
   // Get current theme from document data attribute for dynamic coloring
   import { onMount } from 'svelte'
   
@@ -101,5 +102,10 @@
         {/each}
       </div>
     {/if}
+    
+    <!-- Music track display section -->
+    <div class="mt-2 border-t border-base-content/10 pt-2">
+      <MusicTrackDisplay />
+    </div>
   </div>
 </div>

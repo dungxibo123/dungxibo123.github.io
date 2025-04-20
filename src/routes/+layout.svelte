@@ -3,11 +3,11 @@
   import Head from '$lib/components/head_static.svelte'
   import Header from '$lib/components/header.svelte'
   import Transition from '$lib/components/transition.svelte'
-  import Preloader from '$lib/components/preloader.svelte'
+  import MusicPlayer from '$lib/components/MusicPlayer.svelte'
   import { posts, tags } from '$lib/stores/posts'
+  import { settings } from '$lib/stores/settings'
   import { genTags } from '$lib/utils/posts'
   import { onMount } from 'svelte'
-  import { fade } from 'svelte/transition'
   import { registerSW } from 'virtual:pwa-register'
   import 'uno.css'
 
@@ -19,7 +19,7 @@
 
   let { path, res } = data
   
-  // Preloading state
+  // Preloading variables
   let isLoading = true
   let hasVisited = false
 
@@ -34,11 +34,11 @@
       hasVisited = localStorage.getItem('hasVisited') === 'true'
       
       if (!hasVisited) {
-        // First time visit - show loader for 3 seconds
+        // First time visit - show loader for 2 seconds
         setTimeout(() => {
           isLoading = false
           localStorage.setItem('hasVisited', 'true')
-        }, 3000)
+        }, 2000)
       } else {
         // Already visited - skip loader
         isLoading = false
@@ -57,14 +57,19 @@
 
 <Head />
 
-<Preloader {isLoading} />
-
-{#if !isLoading || hasVisited}
-  <div in:fade={{ duration: 800, delay: 300 }}>
-    <Header {path} />
-
-    <Transition {path}>
-      <slot />
-    </Transition>
+{#if isLoading && !hasVisited}
+  <div class="fixed inset-0 flex items-center justify-center bg-base-100 z-50">
+    <div class="animate-spin rounded-full h-32 w-32 border-b-4 border-primary"></div>
   </div>
+{:else}
+  {#if browser}
+    <!-- Background music component -->
+    <MusicPlayer />
+  {/if}
+  
+  <Header {path} />
+
+  <Transition {path}>
+    <slot />
+  </Transition>
 {/if}
