@@ -41,14 +41,12 @@ $$
 $$  
 Thus, the convex combination lies in $\text{epi}(f)$, proving it is convex and closed. $\square$
 
-**Definition 1.5** (Normal cones to convex sets):  
-Let $\Omega \subseteq \mathbb{R}^n$ be convex and $\bar{x} \in \Omega$. The normal cone at $\bar{x}$ is:  
+**Definition 1.5** (Normal cones to convex sets):  Let $\Omega \subseteq \mathbb{R}^n$ be convex and $\bar{x} \in \Omega$. The normal cone at $\bar{x}$ is:  
 $$
 \mathcal{N}(\Omega, \bar{x}) = \{v \in \mathbb{R}^n : \langle v, x - \bar{x} \rangle \leq 0 \quad \forall x \in \Omega\}
 $$
 
-**Proposition 1.6** (Convexity of normal cones):  
-$\mathcal{N}(\Omega, \bar{x})$ is a convex set.
+**Proposition 1.6** (Convexity of normal cones):  $\mathcal{N}(\Omega, \bar{x})$ is a convex set.
 
 *Proof.*  
 For $v_1, v_2 \in \mathcal{N}(\Omega, \bar{x})$ and $\lambda \in [0,1]$:  
@@ -61,14 +59,12 @@ $$
 $$  
 Hence, $\lambda v_1 + (1-\lambda)v_2 \in \mathcal{N}(\Omega, \bar{x})$. $\square$
 
-**Theorem 1.7** (Normal cone to intersection of convex sets):  
-If $\Omega_1, \Omega_2$ are convex sets with $\text{ri}(\Omega_1) \cap \text{ri}(\Omega_2) \neq \emptyset$, then:  
+**Theorem 1.7** (Normal cone to intersection of convex sets): If $\Omega_1, \Omega_2$ are convex sets with $\text{ri}(\Omega_1) \cap \text{ri}(\Omega_2) \neq \emptyset$, then:  
 $$
 \mathcal{N}(\bar{x}, \Omega_1 \cap \Omega_2) = \mathcal{N}(\bar{x}, \Omega_1) + \mathcal{N}(\bar{x}, \Omega_2)
 $$
 
-**Theorem 1.8** (First-order condition for convexity):  
-A differentiable function $f: X \to \mathbb{R}$ on a convex set $X$ is convex if and only if:  
+**Theorem 1.8** (First-order condition for convexity):  A differentiable function $f: X \to \mathbb{R}$ on a convex set $X$ is convex if and only if:  
 $$
 f(y) \geq f(x) + \langle \nabla f(x), y - x \rangle \quad \forall x, y \in X
 $$
@@ -87,5 +83,4 @@ $$
 \lambda f(x) + (1-\lambda)f(y) \geq f(z) \square
 $$  
 
-**Theorem 1.9** (Second-order characterization):  
-A twice differentiable $f: X \to \mathbb{R}$ is convex if and only if its Hessian $\nabla^2 f(x)$ is positive semi-definite for all $x \in X$.
+**Theorem 1.9** (Second-order characterization):  A twice differentiable $f: X \to \mathbb{R}$ is convex if and only if its Hessian $\nabla^2 f(x)$ is positive semi-definite for all $x \in X$.
