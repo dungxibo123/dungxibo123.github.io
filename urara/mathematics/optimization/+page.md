@@ -1,7 +1,7 @@
 ---
 title: Convex Optimization - Basics convex functions and sets
 created: 2024-12-16
-tags: ['math']
+tags: ['math', 'convex', 'optimization']
 ---
 
 We first going on to a most basic definition of convex-related stuffs - **Convex set**. Basically, a set called convex if and only if every single point lie between two points of the current set is also in that set.
