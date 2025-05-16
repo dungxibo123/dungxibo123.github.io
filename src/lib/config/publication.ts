@@ -7,8 +7,8 @@ export const publications: Publication[] = [
     title: "Colloquial Singaporean English Style Transfer with Fine-Grained Explainable Control",
     tags: ["Multi-agent systems", "Large language models", "Prompting"],
     img: "/assets/stylecontrol.png",
-    cate: "Preprint",
-    conf: null,
+    cate: "Conference",
+    conf: "ACL 2025 Main",
     authors: [
       {
         name: "Liang Jinggui",
