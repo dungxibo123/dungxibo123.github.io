@@ -47,6 +47,10 @@ export const header: HeaderConfig = {
       link: '/publications',
       text: 'Publications'
     },
+    {
+      link: '/cv',
+      text: 'CV'
+    }
   ],
   search: {
     colors: true,
