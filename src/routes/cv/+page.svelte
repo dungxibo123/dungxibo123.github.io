@@ -1,6 +1,7 @@
 <script lang="ts">
   import Head from '$lib/components/head.svelte'
   import { cvData } from '$lib/config/cv'
+  import { site } from '$lib/config/site'
   import { onMount } from 'svelte'
 
   // Function to handle CV download
@@ -21,6 +22,15 @@
 <div class="container mx-auto px-4 py-8 max-w-4xl">
   <!-- Header Section -->
   <div class="text-center mb-12">
+    <!-- Avatar -->
+    <div class="mb-6">
+      <img 
+        src={site.author.avatar} 
+        alt={site.author.name}
+        class="w-32 h-32 rounded-full mx-auto shadow-lg object-cover"
+      />
+    </div>
+    
     <h1 class="text-4xl font-bold mb-2">{cvData.name}</h1>
     <p class="text-xl opacity-75">{cvData.title}</p>
     
@@ -104,7 +114,52 @@
             <h3 class="card-title">{skillCategory.category}</h3>
             <div class="flex flex-wrap gap-2 mt-2">
               {#each skillCategory.items as skill}
-                <span class="badge badge-primary badge-lg">{skill}</span>
+                <div class="badge badge-primary badge-lg flex items-center gap-2 px-3 py-2">
+                  <!-- Technology Icons -->
+                  {#if skill === 'Python'}
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/python.svg" alt="Python" class="w-4 h-4 filter brightness-0 invert" />
+                  {:else if skill === 'JavaScript'}
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/javascript.svg" alt="JavaScript" class="w-4 h-4 filter brightness-0 invert" />
+                  {:else if skill === 'TypeScript'}
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/typescript.svg" alt="TypeScript" class="w-4 h-4 filter brightness-0 invert" />
+                  {:else if skill === 'C++'}
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/cplusplus.svg" alt="C++" class="w-4 h-4 filter brightness-0 invert" />
+                  {:else if skill === 'Java'}
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/openjdk.svg" alt="Java" class="w-4 h-4 filter brightness-0 invert" />
+                  {:else if skill === 'PyTorch'}
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/pytorch.svg" alt="PyTorch" class="w-4 h-4 filter brightness-0 invert" />
+                  {:else if skill === 'TensorFlow'}
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/tensorflow.svg" alt="TensorFlow" class="w-4 h-4 filter brightness-0 invert" />
+                  {:else if skill === 'Scikit-learn'}
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/scikitlearn.svg" alt="Scikit-learn" class="w-4 h-4 filter brightness-0 invert" />
+                  {:else if skill === 'Keras'}
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/keras.svg" alt="Keras" class="w-4 h-4 filter brightness-0 invert" />
+                  {:else if skill === 'Hugging Face'}
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/huggingface.svg" alt="Hugging Face" class="w-4 h-4 filter brightness-0 invert" />
+                  {:else if skill === 'Pandas'}
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/pandas.svg" alt="Pandas" class="w-4 h-4 filter brightness-0 invert" />
+                  {:else if skill === 'NumPy'}
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/numpy.svg" alt="NumPy" class="w-4 h-4 filter brightness-0 invert" />
+                  {:else if skill === 'SQL'}
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/mysql.svg" alt="SQL" class="w-4 h-4 filter brightness-0 invert" />
+                  {:else if skill === 'Matplotlib'}
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/plotly.svg" alt="Matplotlib" class="w-4 h-4 filter brightness-0 invert" />
+                  {:else if skill === 'Docker'}
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/docker.svg" alt="Docker" class="w-4 h-4 filter brightness-0 invert" />
+                  {:else if skill === 'Kubernetes'}
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/kubernetes.svg" alt="Kubernetes" class="w-4 h-4 filter brightness-0 invert" />
+                  {:else if skill === 'AWS'}
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/amazonwebservices.svg" alt="AWS" class="w-4 h-4 filter brightness-0 invert" />
+                  {:else if skill === 'GCP'}
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/googlecloud.svg" alt="GCP" class="w-4 h-4 filter brightness-0 invert" />
+                  {:else}
+                    <!-- Generic icon for skills without specific logos -->
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.847a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.847.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z" />
+                    </svg>
+                  {/if}
+                  <span>{skill}</span>
+                </div>
               {/each}
             </div>
           </div>
