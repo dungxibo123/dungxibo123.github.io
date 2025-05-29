@@ -6,17 +6,17 @@ export const cvData: CVData = {
   cvFile: '/assets/VoTienDung_CV.pdf', // Path to your CV file for download
   contactInfo: [
     { 
-      icon: 'i-heroicons-envelope', 
+      icon: 'mail', 
       text: 'dung.vo@wayne.edu',
       link: 'mailto:dung.vo@wayne.edu'
     },
     { 
-      icon: 'i-heroicons-globe-alt', 
+      icon: 'internetexplorer', 
       text: 'dungxibo123.github.io',
       link: 'https://dungxibo123.github.io'
     },
     { 
-      icon: 'i-heroicons-map-pin', 
+      icon: 'googlemaps', 
       text: 'Vietnam'
     }
   ],
@@ -102,19 +102,57 @@ export const cvData: CVData = {
   skills: [
     {
       category: 'Programming Languages',
-      items: ['Python', 'JavaScript', 'TypeScript', 'C++', 'Java']
+      items: [
+        { name: 'Python', icon: 'python' },
+        { name: 'JavaScript', icon: 'javascript' },
+        { name: 'TypeScript', icon: 'typescript' },
+        { name: 'C++', icon: 'cplusplus' },
+        { name: 'Java', icon: 'htmx' }
+      ]
     },
     {
       category: 'Machine Learning',
-      items: ['PyTorch', 'TensorFlow', 'Scikit-learn', 'Keras', 'Hugging Face']
+      items: [
+        { name: 'PyTorch', icon: 'pytorch' },
+        { name: 'TensorFlow', icon: 'tensorflow' },
+        { name: 'Scikit-learn', icon: 'scikitlearn' },
+        { name: 'Keras', icon: 'keras' },
+        'Hugging Face'
+      ]
     },
     {
       category: 'Data Science',
-      items: ['Pandas', 'NumPy', 'SQL', 'Matplotlib', 'Seaborn']
+      items: [
+        { name: 'Pandas', icon: 'pandas' },
+        { name: 'NumPy', icon: 'numpy' },
+        { name: 'SQL', icon: 'mysql' },
+        { name: 'Matplotlib', icon: 'plotly' },
+        'Seaborn'
+      ]
     },
     {
       category: 'MLOps',
-      items: ['Docker', 'Kubernetes', 'CI/CD', 'AWS', 'GCP']
+      items: [
+        { name: 'Docker', icon: 'docker' },
+        { name: 'Kubernetes', icon: 'kubernetes' },
+        'CI/CD',
+        { name: 'AWS', icon: 'amazon' },
+        { name: 'GCP', icon: 'googlecloud' }
+      ]
+    },
+    {
+      category: 'Tools',
+      items: [
+        { name: 'Git', icon: 'git' },
+        { name: 'Neovim', icon: 'neovim' },
+        { name: 'Kafka', icon: 'apachekafka' },
+        { name: 'Redis', icon: 'redis' },
+        { name: 'Neo4j', icon: 'neo4j'},
+        { name: 'Hugging Face', icon: 'huggingface' },
+        { name: 'LaTeX', icon: 'latex' },
+        { name: 'Jupyter', icon: 'jupyter' },
+        { name: 'Arch Linux', icon: 'archlinux'}
+      ]
     },
     {
       category: 'Research Areas',

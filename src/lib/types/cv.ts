@@ -20,9 +20,14 @@ export interface Education {
   details?: string[]
 }
 
+export interface SkillItem {
+  name: string
+  icon?: string
+}
+
 export interface SkillCategory {
   category: string
-  items: string[]
+  items: (string | SkillItem)[]
 }
 
 export interface Reference {

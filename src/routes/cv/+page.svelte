@@ -10,11 +10,30 @@
     window.open(cvData.cvFile, '_blank')
   }
 
-  // For animation
+  // For animation and theme detection
   let loaded = false
+  let isDarkTheme = false
+  
   onMount(() => {
     loaded = true
+    
+    // Initial theme check
+    checkTheme()
+    
+    // Setup observer to detect theme changes
+    const observer = new MutationObserver(checkTheme)
+    observer.observe(document.documentElement, { 
+      attributes: true,
+      attributeFilter: ['data-theme'] 
+    })
+    
+    return () => observer.disconnect()
   })
+  
+  function checkTheme() {
+    const theme = document.documentElement.getAttribute('data-theme')
+    isDarkTheme = ['dracula', 'night', 'synthwave'].includes(theme)
+  }
 </script>
 
 <Head />
@@ -38,7 +57,9 @@
     <div class="flex flex-wrap justify-center gap-4 mt-4">
       {#each cvData.contactInfo as contact}
         <div class="flex items-center gap-2">
-          <span class="{contact.icon} w-5 h-5"></span>
+          <span class="w-5 h-5 flex items-center justify-center">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/{contact.icon}.svg" alt="{contact.icon}" class="w-5 h-5" class:filter={isDarkTheme} class:brightness-0={isDarkTheme} class:invert={isDarkTheme} />
+          </span>
           {#if contact.link}
             <a href={contact.link} class="hover:text-primary transition-colors">{contact.text}</a>
           {:else}
@@ -52,6 +73,9 @@
     <button 
       on:click={downloadCV}
       class="btn btn-primary mt-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+      <span class="w-5 h-5 flex items-center justify-center">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/adobeacrobatreader.svg" alt="download" class="w-5 h-5" class:filter={isDarkTheme} class:brightness-0={isDarkTheme} class:invert={isDarkTheme} />
+      </span>
       Download CV
     </button>
   </div>
@@ -115,50 +139,17 @@
             <div class="flex flex-wrap gap-2 mt-2">
               {#each skillCategory.items as skill}
                 <div class="badge badge-primary badge-lg flex items-center gap-2 px-3 py-2">
-                  <!-- Technology Icons -->
-                  {#if skill === 'Python'}
-                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/python.svg" alt="Python" class="w-4 h-4 filter brightness-0 invert" />
-                  {:else if skill === 'JavaScript'}
-                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/javascript.svg" alt="JavaScript" class="w-4 h-4 filter brightness-0 invert" />
-                  {:else if skill === 'TypeScript'}
-                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/typescript.svg" alt="TypeScript" class="w-4 h-4 filter brightness-0 invert" />
-                  {:else if skill === 'C++'}
-                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/cplusplus.svg" alt="C++" class="w-4 h-4 filter brightness-0 invert" />
-                  {:else if skill === 'Java'}
-                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/openjdk.svg" alt="Java" class="w-4 h-4 filter brightness-0 invert" />
-                  {:else if skill === 'PyTorch'}
-                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/pytorch.svg" alt="PyTorch" class="w-4 h-4 filter brightness-0 invert" />
-                  {:else if skill === 'TensorFlow'}
-                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/tensorflow.svg" alt="TensorFlow" class="w-4 h-4 filter brightness-0 invert" />
-                  {:else if skill === 'Scikit-learn'}
-                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/scikitlearn.svg" alt="Scikit-learn" class="w-4 h-4 filter brightness-0 invert" />
-                  {:else if skill === 'Keras'}
-                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/keras.svg" alt="Keras" class="w-4 h-4 filter brightness-0 invert" />
-                  {:else if skill === 'Hugging Face'}
-                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/huggingface.svg" alt="Hugging Face" class="w-4 h-4 filter brightness-0 invert" />
-                  {:else if skill === 'Pandas'}
-                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/pandas.svg" alt="Pandas" class="w-4 h-4 filter brightness-0 invert" />
-                  {:else if skill === 'NumPy'}
-                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/numpy.svg" alt="NumPy" class="w-4 h-4 filter brightness-0 invert" />
-                  {:else if skill === 'SQL'}
-                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/mysql.svg" alt="SQL" class="w-4 h-4 filter brightness-0 invert" />
-                  {:else if skill === 'Matplotlib'}
-                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/plotly.svg" alt="Matplotlib" class="w-4 h-4 filter brightness-0 invert" />
-                  {:else if skill === 'Docker'}
-                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/docker.svg" alt="Docker" class="w-4 h-4 filter brightness-0 invert" />
-                  {:else if skill === 'Kubernetes'}
-                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/kubernetes.svg" alt="Kubernetes" class="w-4 h-4 filter brightness-0 invert" />
-                  {:else if skill === 'AWS'}
-                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/amazonwebservices.svg" alt="AWS" class="w-4 h-4 filter brightness-0 invert" />
-                  {:else if skill === 'GCP'}
-                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/googlecloud.svg" alt="GCP" class="w-4 h-4 filter brightness-0 invert" />
+                  <!-- Dynamic Technology Icons -->
+                  {#if typeof skill === 'object' && skill.icon}
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@14/icons/{skill.icon}.svg" alt="{skill.name}" class="w-4 h-4 filter brightness-0 invert" />
+                    <span>{skill.name}</span>
                   {:else}
                     <!-- Generic icon for skills without specific logos -->
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
                       <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.847a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.847.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z" />
                     </svg>
+                    <span>{typeof skill === 'object' ? skill.name : skill}</span>
                   {/if}
-                  <span>{skill}</span>
                 </div>
               {/each}
             </div>
