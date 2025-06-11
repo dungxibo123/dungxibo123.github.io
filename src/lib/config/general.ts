@@ -50,12 +50,15 @@ export const header: HeaderConfig = {
     {
       link: '/cv',
       text: 'CV'
+    },
+    {
+      link: '/mentorship',
+      text: 'Mentorship'
     }
   ],
   search: {
     colors: true,
     provider: 'google'
-
   }
 }
 

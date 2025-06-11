@@ -175,4 +175,33 @@ pre.twoslash data-lsp:hover::before {
 
 /* your code here */
 
+/* details tag styling */
+.urara-prose details {
+  @apply my-4 rounded-lg border border-base-content/20 bg-base-200/50 transition-all duration-200 hover:border-primary/40;
+}
+
+.urara-prose details summary {
+  @apply cursor-pointer px-4 py-2 font-semibold marker:content-none;
+}
+
+.urara-prose details summary::before {
+  @apply me-2 inline-block transition-transform content-['▶'];
+}
+
+.urara-prose details[open] summary::before {
+  @apply rotate-90;
+}
+
+.urara-prose details[open] summary {
+  @apply border-b border-base-content/20;
+}
+
+.urara-prose details > div {
+  @apply p-4;
+}
+
+.urara-prose details > :is(p, ul, ol) {
+  @apply mx-4 my-2;
+}
+
 
