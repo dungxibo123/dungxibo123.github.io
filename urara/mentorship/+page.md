@@ -44,5 +44,7 @@ Sadly, I do not have enough time for carefully planning the mentorship relations
 
 <details>
 <summary>You want become a mentee or are looking for help?</summary>
+<div>
 I am very appreciate that you are reading onto these last lines of the post, so I just want to share a thing with you. I always have a small desire that when I have enough reputation and available time, I will take one or two student and carefully instruct them as my mentee. As I said, I rarely have time to do that thing very carefully. But if you think you really want to be my "under", do not hestitate to contact me via my email address.
+</div>
 </details>
