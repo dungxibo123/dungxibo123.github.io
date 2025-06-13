@@ -83,6 +83,7 @@
     "workbox-window": "^7.0.0"
   },
   "dependencies": {
+    "@giscus/svelte": "^3.1.0",
     "@types/leaflet": "^1.9.18",
     "install": "^0.13.0",
     "katex": "^0.13.18",
