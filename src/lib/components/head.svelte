@@ -10,50 +10,77 @@
   export let post: undefined | Urara.Post
   export let page: undefined | Urara.Page
   
-  let giscusTheme = 'light';
+ 
+  // Define theme mapping
+  const themeGiscusMapping = {
+    'dark': 'catppuccin_mocha',
+    'cmyk': 'light',
+    'dracula': 'catppuccin_mocha',
+    'night': 'catppuccin_mocha',
+    'synthwave': 'dark_protanopia',
+    'retro': 'gruvbox_light',
+    'lofi': 'light'
+  }
   
+  // Default theme (will be updated in onMount)
+  let giscusTheme = 'catppuccin_mocha';
   onMount(() => {
     if (browser) {
-      // Initial theme check
-      const theme = document.documentElement.getAttribute('data-theme')
-      giscusTheme = theme ? 
-        ['dracula', 'night', 'synthwave'].includes(theme) ? 'dark_protanopia' : 'light' 
-        : 'dark';
+      // Function to update Giscus theme
+      function updateGiscusTheme() {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        if (currentTheme && themeGiscusMapping[currentTheme]) {
+          giscusTheme = themeGiscusMapping[currentTheme];
+        } else {
+          // Fallback to default dark theme
+          giscusTheme = 'catppuccin_mocha';
+        }
+      }
+      
+      // Function to send message to Giscus iframe
       function sendMessage<T>(message: T) {
         const iframe = document.querySelector<HTMLIFrameElement>('iframe.giscus-frame');
         if (!iframe) return;
         iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
       }
+      
+      // Initial theme check
+      updateGiscusTheme();
+      
       // Setup observer to detect theme changes
-      const themeGiscusMapping = {
-        'dark': 'dark_protanopia',
-        'light': 'light',
-        'dracula': 'dark_protanopia',
-        'night': 'catppuccin_mocha',
-        'synthwave': 'dark_protanopia',
-        'retro': 'gruvbox_light'
-      }
       const observer = new MutationObserver((mutations) => {
         mutations.forEach((mutation) => {
           if (mutation.attributeName === 'data-theme') {
-            const newTheme = document.documentElement.getAttribute('data-theme')
-            if (newTheme) {
-              sendMessage(
-                {
-                  setConfig: {
-                    theme: themeGiscusMapping[newTheme]
-                  }
-                }
-              )
-            }
+            updateGiscusTheme();
+            
+            // Also send message to update existing iframe if it exists
+            sendMessage({
+              setConfig: {
+                theme: giscusTheme
+              }
+            });
           }
-        })
-      })
+        });
+      });
       
       observer.observe(document.documentElement, {
         attributes: true,
         attributeFilter: ['data-theme']
-      })
+      });
+      
+      // Add event listener for when Giscus iframe is loaded
+      window.addEventListener('message', (event) => {
+        if (event.origin !== 'https://giscus.app') return;
+        
+        // When Giscus is loaded, update its theme
+        if (event.data?.giscus?.discussion) {
+          sendMessage({
+            setConfig: {
+              theme: giscusTheme
+            }
+          });
+        }
+      });
     }
   })
 </script>
