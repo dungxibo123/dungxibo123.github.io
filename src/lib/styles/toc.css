@@ -1,0 +1,171 @@
+.toc-container {
+  @apply bg-base-100 rounded-xl shadow-lg border border-base-300 p-6 backdrop-blur-sm mb-8;
+  border-color: var(--fallback-bc, rgba(0, 0, 0, 0.1));
+}
+
+.toc-text {
+  @apply text-sm leading-relaxed transition-all duration-200;
+  @apply text-base-content;
+  color: var(--fallback-bc, currentColor);
+}
+
+.toc-header {
+  @apply mb-4;
+}
+
+.toc-title {
+  @apply text-lg font-bold text-base-content mb-2 flex items-center gap-2;
+}
+
+.toc-title::before {
+  content: '📋';
+  @apply text-xl;
+}
+
+.toc-divider {
+  @apply h-px bg-gradient-to-r from-primary via-accent to-transparent;
+}
+
+.toc-nav {
+  @apply max-h-[calc(100vh-16rem)] overflow-y-hidden hover:overflow-y-auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(156, 163, 175, 0.5) transparent;
+}
+
+.toc-nav::-webkit-scrollbar {
+  width: 4px;
+}
+
+.toc-nav::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.toc-nav::-webkit-scrollbar-thumb {
+  background-color: rgba(156, 163, 175, 0.5);
+  border-radius: 2px;
+}
+
+.toc-nav::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(156, 163, 175, 0.7);
+}
+
+.toc-list {
+  @apply space-y-1;
+}
+
+.toc-item {
+  @apply relative;
+}
+
+.toc-link {
+  @apply flex items-center gap-3 py-2 px-3 rounded-lg cursor-pointer transition-all duration-200 ease-in-out;
+  @apply hover:bg-base-200 hover:shadow-sm active:scale-[0.98];
+  @apply border-l-4 border-transparent;
+}
+
+.toc-link:hover {
+  @apply border-l-primary transform translate-x-1;
+}
+
+.toc-link.\!border-accent {
+  @apply bg-primary bg-opacity-10 border-l-primary text-primary font-semibold shadow-sm;
+}
+
+.toc-bullet {
+  @apply w-2 h-2 rounded-full transition-all duration-200;
+  @apply bg-base-300;
+  background-color: var(--fallback-bc, currentColor);
+  opacity: 0.3;
+  flex-shrink: 0;
+}
+
+.toc-link:hover .toc-bullet {
+  @apply bg-primary scale-125;
+}
+
+.toc-link.\!border-accent .toc-bullet {
+  @apply bg-primary scale-125 shadow-sm;
+}
+
+.toc-text {
+  @apply text-sm leading-relaxed transition-all duration-200;
+  @apply text-base-content hover:text-primary;
+  color: var(--fallback-bc, currentColor);
+}
+
+.toc-link.\!border-accent .toc-text {
+  @apply text-primary;
+}
+
+/* Depth-based styling */
+.depth-1 {
+  @apply ml-0;
+}
+
+.depth-2 {
+  @apply ml-4 text-sm;
+}
+
+.depth-2 .toc-bullet {
+  @apply w-1.5 h-1.5;
+}
+
+.depth-3 {
+  @apply ml-8 text-sm opacity-90;
+}
+
+.depth-3 .toc-bullet {
+  @apply w-1 h-1;
+}
+
+.depth-4 {
+  @apply ml-12 text-xs opacity-80;
+}
+
+.depth-4 .toc-bullet {
+  @apply w-1 h-1;
+}
+
+.depth-5 {
+  @apply ml-16 text-xs opacity-70;
+}
+
+.depth-5 .toc-bullet {
+  @apply w-0.5 h-0.5;
+}
+
+.depth-6 {
+  @apply ml-20 text-xs opacity-60;
+}
+
+.depth-6 .toc-bullet {
+  @apply w-0.5 h-0.5;
+}
+
+/* Responsive design */
+@media (max-width: 1279px) {
+  .toc-container {
+    @apply hidden;
+  }
+}
+
+/* Animation for active state */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+  }
+}
+
+.toc-link.\!border-accent {
+  animation: pulse-glow 2s infinite;
+}
+
+/* Hover effects for better UX */
+.toc-item:hover::before {
+  content: '';
+  @apply absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-primary to-accent rounded-r-full;
+  @apply opacity-50 transition-opacity duration-200;
+}

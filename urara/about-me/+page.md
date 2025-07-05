@@ -17,7 +17,7 @@ My main research interest currently lies on the intersection between the **Optim
 
 # About the blog
 
-As always, the blog is migrated from the old one, so it will stayed the same with the initial idea. I build this blog for sharing knowledge, ideas, research. But now, there will be some posts regarding to my PhD journey. I am trying the best to get at least one offer this year and if not; I will try to get many in the following year.
+As always, the blog is migrated from the old one, so it will stayed the same with the initial idea. I build this blog for sharing knowledge, ideas, research. But now, there will be some posts regarding to my PhD journey.
 
 
 

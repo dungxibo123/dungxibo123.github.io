@@ -44,43 +44,55 @@
   $: if (intersectingArticle === false)
     bordered = []
   $: if (bordered) {
-    toc.forEach(heading =>
-      bordered.includes(heading.slug!)
-        ? document.getElementById(`toc-link-${heading.slug}`)?.classList.add('!border-accent')
-        : document.getElementById(`toc-link-${heading.slug}`)?.classList.remove('!border-accent'),
-    )
+    toc.forEach(heading => {
+      const tocLink = document.getElementById(`toc-link-${heading.slug}`)
+      if (bordered.includes(heading.slug!)) {
+        tocLink?.classList.add('!border-accent')
+        // Smooth scroll the active TOC item into view
+        tocLink?.scrollIntoView({
+          behavior: 'smooth',
+          block: 'nearest',
+          inline: 'nearest'
+        })
+      } else {
+        tocLink?.classList.remove('!border-accent')
+      }
+    })
   }
 </script>
 
 <aside class='sticky top-16 py-8'>
-  <nav
-    aria-label='TableOfContent'
-    class='max-h-[calc(100vh-12rem)] overflow-y-hidden hover:overflow-y-auto'
-    dir='rtl'
-    id='post-toc'>
-    <ul dir='ltr' id='toc-list-root'>
-      {#each toc as { depth, slug, title }}
-        <li class='flex flex-col' id={`toc-item-${slug}`}>
-          <!-- svelte-ignore a11y-click-events-have-key-events -->
-          <span
-            class="cursor-pointer border-l-4 border-transparent transition-all hover:border-primary hover:bg-base-content hover:bg-opacity-10 active:bg-primary active:text-primary-content active:font-bold pr-4{depth
-            <= 2
-              ? 'py-3'
-              : 'py-2'}"
-            class:pl-4={depth <= 2}
-            class:pl-8={depth === 3}
-            class:pl-12={depth === 4}
-            class:pl-16={depth === 5}
-            class:pl-20={depth === 6}
-            dir='ltr'
-            id={`toc-link-${slug}`}
-            on:click={() =>
-              // @ts-ignore Object is possibly 'null'. ts(2531)
-              document.getElementById(slug).scrollIntoView({ behavior: 'smooth' })}>
-            {title}
-          </span>
-        </li>
-      {/each}
-    </ul>
-  </nav>
+  <div class='toc-container'>
+    <div class='toc-header'>
+      <h3 class='toc-title'>Table of Contents</h3>
+      <div class='toc-divider'></div>
+    </div>
+    <nav
+      aria-label='TableOfContent'
+      class='toc-nav'
+      dir='rtl'
+      id='post-toc'>
+      <ul dir='ltr' id='toc-list-root' class='toc-list'>
+        {#each toc as { depth, slug, title }}
+          <li class='toc-item' id={`toc-item-${slug}`} data-depth={depth}>
+            <!-- svelte-ignore a11y-click-events-have-key-events -->
+            <span
+              class="toc-link depth-{depth}"
+              id={`toc-link-${slug}`}
+              on:click={() =>
+                // @ts-ignore Object is possibly 'null'. ts(2531)
+                document.getElementById(slug).scrollIntoView({ behavior: 'smooth' })}>
+              <span class='toc-bullet'></span>
+              <span class='toc-text'>{title}</span>
+            </span>
+          </li>
+        {/each}
+      </ul>
+    </nav>
+  </div>
 </aside>
+
+
+<style lang="postcss">
+  @import '../styles/toc.css';
+</style>
