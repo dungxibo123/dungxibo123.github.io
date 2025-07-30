@@ -1,0 +1,25 @@
+name: Telegram Notification
+
+on:
+  push:
+    branches:
+      - master
+      - main
+      - 'dev/**'
+  fork:
+    braches:
+      - '*'
+  pull_request:
+    branches:
+      - master
+      - 'dung.vo/**'
+
+
+
+jobs:
+  inherit_telegram_workflow:
+    uses: dungxibo123/actions/.github/workflows/telegram.yml@master
+    secrets:
+      TELEGRAM_BOT_API: ${{ secrets.TELEGRAM_BOT_API }}
+    with:
+      chatId: 5619096601
