@@ -55,12 +55,12 @@ export const publications: Publication[] = [
     ]
   },
   {
-    id: "convsint",
+    id: "intentionframe",
     title: "IntentionFrame: A Semi-Structured Framework for Fine-Grained Conversational Intention Understanding",
     tags: ["Data", "Semi-supervised learning"],
     img: "/assets/convsint.png",
-    cate: "Preprint",
-    conf: null,
+    cate: "Conference",
+    conf: "EMNLP 2025",
     authors: [
       createAuthorEntry('liangJinggui'),
       createAuthorEntry('dungvo', { me: true }),
