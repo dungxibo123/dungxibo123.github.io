@@ -22,7 +22,7 @@
   
   function checkTheme() {
     const theme = document.documentElement.getAttribute('data-theme')
-    isDarkTheme = ['dracula', 'night', 'synthwave'].includes(theme)
+    isDarkTheme = theme ? ['dracula', 'night', 'synthwave'].includes(theme) : false
   }
 </script>
 

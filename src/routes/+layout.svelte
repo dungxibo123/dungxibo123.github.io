@@ -4,8 +4,12 @@
   import Header from '$lib/components/header.svelte'
   import Transition from '$lib/components/transition.svelte'
   import MusicPlayer from '$lib/components/MusicPlayer.svelte'
+  import SnowBackground from '$lib/components/SnowBackground.svelte'
+  import SnowControls from '$lib/components/SnowControls.svelte'
+  import WinterTheme from '$lib/components/WinterTheme.svelte'
   import { posts, tags } from '$lib/stores/posts'
   import { settings } from '$lib/stores/settings'
+  import { snowConfig } from '$lib/stores/snow'
   import { genTags } from '$lib/utils/posts'
   import { onMount } from 'svelte'
   import { registerSW } from 'virtual:pwa-register'
@@ -62,7 +66,20 @@
     <div class="animate-spin rounded-full h-32 w-32 border-b-4 border-primary"></div>
   </div>
 {:else}
+  <!-- Snow Background Effect -->
   {#if browser}
+    <!-- Winter Theme Background -->
+    <WinterTheme />
+    
+    <SnowBackground 
+      intensity={$snowConfig.intensity}
+      enabled={$snowConfig.enabled}
+      interactive={$snowConfig.interactive}
+    />
+    
+    <!-- Snow Controls -->
+    <SnowControls />
+    
     <!-- Background music component -->
     <MusicPlayer />
   {/if}
