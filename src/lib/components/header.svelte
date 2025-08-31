@@ -2,6 +2,7 @@
   import { browser, dev } from '$app/environment'
   import Nav from '$lib/components/header_nav.svelte'
   import Search from '$lib/components/header_search.svelte'
+  import HeaderControls from '$lib/components/HeaderControls.svelte'
   import { header as headerConfig, theme } from '$lib/config/general'
   import { site } from '$lib/config/site'
   import { title as storedTitle } from '$lib/stores/title'
@@ -45,6 +46,11 @@
     currentTheme
       = localStorage.getItem('theme')
       ?? (window.matchMedia('(prefers-color-scheme: dark)').matches ? theme?.[1].name : theme[0].name ?? theme[0].name)
+    
+    // Listen for theme change events from HeaderControls
+    document.addEventListener('themeChange', (event) => {
+      currentTheme = event.detail.theme;
+    });
   }
 </script>
 
@@ -81,40 +87,9 @@
             <span class='i-heroicons-outline-search' />
           </button>
         {/if}
-        <div class='dropdown dropdown-end' id='change-theme'>
-          <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
-          <!-- reference: https://github.com/saadeghi/daisyui/issues/1285 -->
-          <div class='btn btn-square btn-ghost' tabindex='0'>
-            <span class='i-heroicons-outline-color-swatch' />
-          </div>
-          <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
-          <!-- reference: https://github.com/saadeghi/daisyui/issues/1285 -->
-          <ul
-            class='flex flex-nowrap shadow-2xl menu dropdown-content bg-base-100 text-base-content rounded-box w-52 p-2 gap-2 overflow-y-auto max-h-[21.5rem]'
-            class:hidden={!pin}
-            tabindex='0'>
-            {#each theme as { name, text }}
-              <button
-                class='btn btn-ghost w-full hover:bg-primary group rounded-lg flex bg-base-100 p-2 transition-all'
-                class:border-2={currentTheme === name}
-                class:border-primary={currentTheme === name}
-                data-theme={name}
-                on:click={() => {
-                  currentTheme = name
-                  localStorage.setItem('theme', name)
-                }}>
-                <p class='flex-1 text-left text-base-content group-hover:text-primary-content transition-color'>
-                  {text ?? name}
-                </p>
-                <div class='grid grid-cols-4 gap-0.5 m-auto'>
-                  {#each ['bg-primary', 'bg-secondary', 'bg-accent', 'bg-neutral'] as bg}
-                    <div class={`${bg} w-1 h-4 rounded-btn`} />
-                  {/each}
-                </div>
-              </button>
-            {/each}
-          </ul>
-        </div>
+        
+        <!-- Integrated Theme & Snow Controls -->
+        <HeaderControls {currentTheme} {pin} />
       </div>
     </div>
   {:else}

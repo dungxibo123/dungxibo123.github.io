@@ -5,7 +5,6 @@
   import Transition from '$lib/components/transition.svelte'
   import MusicPlayer from '$lib/components/MusicPlayer.svelte'
   import SnowBackground from '$lib/components/SnowBackground.svelte'
-  import SnowControls from '$lib/components/SnowControls.svelte'
   import WinterTheme from '$lib/components/WinterTheme.svelte'
   import { posts, tags } from '$lib/stores/posts'
   import { settings } from '$lib/stores/settings'
@@ -76,9 +75,6 @@
       enabled={$snowConfig.enabled}
       interactive={$snowConfig.interactive}
     />
-    
-    <!-- Snow Controls -->
-    <SnowControls />
     
     <!-- Background music component -->
     <MusicPlayer />

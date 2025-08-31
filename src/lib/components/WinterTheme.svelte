@@ -12,10 +12,19 @@
 
   let currentGradient = 0;
 
-  // Cycle through gradients
+  // Cycle through gradients automatically
   const cycleGradient = () => {
     currentGradient = (currentGradient + 1) % winterGradients.length;
   };
+  
+  // Auto-cycle gradients every 30 seconds
+  if (typeof window !== 'undefined') {
+    setInterval(() => {
+      if ($snowConfig.enabled) {
+        cycleGradient();
+      }
+    }, 30000);
+  }
 </script>
 
 {#if $snowConfig.enabled}
@@ -28,15 +37,6 @@
       <div class="frost-pattern"></div>
       <div class="shimmer-effect"></div>
     </div>
-    
-    <!-- Gradient Cycle Button -->
-    <button 
-      class="gradient-cycle-btn btn btn-sm btn-circle btn-ghost"
-      on:click={cycleGradient}
-      title="Change winter theme"
-    >
-      🎨
-    </button>
   </div>
 {/if}
 
@@ -86,22 +86,6 @@
       rgba(255, 255, 255, 0) 100%
     );
     animation: shimmer 3s ease-in-out infinite;
-  }
-
-  .gradient-cycle-btn {
-    position: fixed;
-    top: 1rem;
-    left: 1rem;
-    z-index: 1000;
-    backdrop-filter: blur(10px);
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    transition: all 0.3s ease;
-  }
-
-  .gradient-cycle-btn:hover {
-    background: rgba(255, 255, 255, 0.2);
-    transform: scale(1.1);
   }
 
   @keyframes frostMove {
