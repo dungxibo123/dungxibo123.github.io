@@ -68,7 +68,7 @@
   </div>
   <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
   <div
-    class="dropdown-content bg-base-100 rounded-box w-64 shadow-2xl border border-base-300"
+    class="dropdown-content bg-base-100 text-base-content rounded-box w-64 shadow-2xl border border-base-300"
     class:hidden={!pin}
     tabindex="0"
   >
@@ -168,14 +168,7 @@
     z-index: 1000;
     margin-top: 0.5rem;
     backdrop-filter: blur(20px);
-    background: rgba(255, 255, 255, 0.95);
-  }
-  
-  /* Dark theme adjustments */
-  @media (prefers-color-scheme: dark) {
-    .dropdown-content {
-      background: rgba(30, 30, 30, 0.95);
-    }
+    /* Use daisyUI utility classes instead of CSS variables */
   }
   
   /* Mobile adjustments */
